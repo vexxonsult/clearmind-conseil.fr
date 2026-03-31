@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>ClearMind — Conseil RH & Difficultés invisibles au travail</title>
+<title>ClearMind — Conseil RH et difficultés invisibles au travail</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Instrument+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
@@ -35,19 +35,14 @@ button{cursor:pointer;font-family:var(--ff-sans)}
 .t-eyebrow{font-family:var(--ff-sans);font-size:.72rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--sage);display:flex;align-items:center;gap:10px}
 .t-eyebrow::before{content:'';width:24px;height:1px;background:var(--sage);flex-shrink:0}
 .t-display{font-family:var(--ff-serif);font-weight:300;line-height:1.12;letter-spacing:-.01em}
-.t-h1{font-size:clamp(2.8rem,5.5vw,5rem)}
 .t-h2{font-size:clamp(2rem,3.5vw,3.2rem)}
-.t-h3{font-size:clamp(1.4rem,2.2vw,2rem)}
 .t-body{font-size:1rem;line-height:1.75;color:var(--ink-soft)}
-.t-small{font-size:.85rem;line-height:1.6;color:var(--ink-muted)}
 .wrap{max-width:1160px;margin:0 auto;padding:0 40px}
 .wrap--narrow{max-width:800px;margin:0 auto;padding:0 40px}
 .wrap--mid{max-width:980px;margin:0 auto;padding:0 40px}
 .btn{display:inline-flex;align-items:center;gap:10px;font-family:var(--ff-sans);font-size:.88rem;font-weight:500;padding:14px 28px;border-radius:2px;transition:all .25s var(--ease-out);border:none;white-space:nowrap}
 .btn--primary{background:var(--ink);color:var(--white)}
 .btn--primary:hover{background:var(--ink-mid);transform:translateY(-1px);box-shadow:0 8px 32px rgba(22,32,46,.25)}
-.btn--outline{background:transparent;color:var(--ink);border:1px solid var(--border-strong)}
-.btn--outline:hover{background:var(--stone);border-color:var(--ink-soft)}
 .btn--ghost-light{background:rgba(255,255,255,.1);color:var(--white);border:1px solid rgba(255,255,255,.2)}
 .btn--ghost-light:hover{background:rgba(255,255,255,.18);border-color:rgba(255,255,255,.35)}
 .btn svg{transition:transform .2s var(--ease-out)}
@@ -85,6 +80,7 @@ button{cursor:pointer;font-family:var(--ff-sans)}
 .stat-pill{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:8px;padding:20px 24px}
 .stat-pill .num{font-family:var(--ff-serif);font-size:2.4rem;font-weight:300;color:var(--white);line-height:1;margin-bottom:6px}
 .stat-pill .label{font-size:.8rem;color:rgba(163,180,196,.65);line-height:1.4}
+.stat-pill .source{font-size:.7rem;color:rgba(163,180,196,.35);margin-top:6px;font-style:italic}
 .section{padding:108px 0}
 .section--dark{background:var(--ink);padding:96px 0}
 .section--stone{background:var(--stone)}
@@ -103,13 +99,12 @@ button{cursor:pointer;font-family:var(--ff-sans)}
 .insight-card:hover{border-color:var(--sage-light);transform:translateX(4px)}
 .insight-card h4{font-family:var(--ff-sans);font-size:.88rem;font-weight:500;color:var(--ink);margin-bottom:5px}
 .insight-card p{font-size:.83rem;line-height:1.6;color:var(--ink-soft)}
-.signals-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:8px;overflow:hidden}
-.signal-cell{background:var(--white);padding:36px 32px;transition:background .2s}
-.signal-cell:hover{background:var(--stone)}
-.signal-num{font-family:var(--ff-serif);font-size:2.8rem;font-weight:300;color:var(--stone-dark);line-height:1;margin-bottom:20px;transition:color .2s}
-.signal-cell:hover .signal-num{color:var(--sage-light)}
-.signal-cell h4{font-family:var(--ff-sans);font-size:.93rem;font-weight:500;color:var(--ink);margin-bottom:10px;line-height:1.35}
-.signal-cell p{font-size:.84rem;line-height:1.65;color:var(--ink-soft)}
+.steps-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:8px;overflow:hidden;margin-top:56px}
+.step-cell{background:var(--white);padding:32px 28px;transition:background .2s}
+.step-cell:hover{background:var(--stone)}
+.step-num{font-family:var(--ff-serif);font-size:2.4rem;font-weight:300;color:var(--stone-dark);line-height:1;margin-bottom:16px}
+.step-cell h4{font-family:var(--ff-sans);font-size:.9rem;font-weight:500;color:var(--ink);margin-bottom:8px}
+.step-cell p{font-size:.83rem;line-height:1.65;color:var(--ink-soft)}
 .offre-wrap{display:grid;grid-template-columns:1fr 400px;gap:64px;align-items:start}
 .steps-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:8px;overflow:hidden}
 .steps-card-head{background:rgba(255,255,255,.06);padding:20px 28px;border-bottom:1px solid rgba(255,255,255,.08);font-family:var(--ff-serif);font-size:1.1rem;font-weight:400;color:rgba(255,255,255,.8)}
@@ -119,10 +114,9 @@ button{cursor:pointer;font-family:var(--ff-sans)}
 .step-n{font-family:var(--ff-serif);font-size:1.4rem;font-weight:300;color:rgba(122,158,130,.5);line-height:1;flex-shrink:0;width:22px;padding-top:2px}
 .step-body h5{font-family:var(--ff-sans);font-size:.85rem;font-weight:500;color:rgba(255,255,255,.85);margin-bottom:3px}
 .step-body p{font-size:.78rem;line-height:1.55;color:rgba(163,180,196,.6)}
-.price-band{background:rgba(122,158,130,.12);border-top:1px solid rgba(122,158,130,.2);padding:22px 28px;display:flex;align-items:center;justify-content:space-between}
-.price-band .amount{font-family:var(--ff-serif);font-size:2rem;font-weight:300;color:var(--white)}
-.price-band .amount span{font-size:.9rem;opacity:.5;margin-left:2px}
-.price-band .note{font-size:.75rem;color:rgba(163,180,196,.55);text-align:right;line-height:1.5}
+.price-entry{background:rgba(122,158,130,.12);border-top:1px solid rgba(122,158,130,.2);padding:22px 28px;text-align:center}
+.price-entry p{font-size:.8rem;color:rgba(163,180,196,.55);margin-bottom:6px}
+.price-entry .cta-link{font-size:.88rem;color:var(--sage-light);font-weight:500;border-bottom:1px solid rgba(122,158,130,.3);padding-bottom:2px}
 .include-item{display:flex;align-items:flex-start;gap:14px;font-size:.92rem;color:rgba(200,215,225,.85)}
 .include-dot{width:20px;height:20px;border-radius:50%;background:rgba(122,158,130,.2);border:1px solid rgba(122,158,130,.4);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
 .offre-include{margin:36px 0;display:flex;flex-direction:column;gap:10px}
@@ -132,12 +126,6 @@ button{cursor:pointer;font-family:var(--ff-sans)}
 .target-role{font-size:.7rem;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:var(--sage);margin-bottom:12px}
 .target-card h4{font-family:var(--ff-serif);font-size:1.2rem;font-weight:400;color:var(--ink);margin-bottom:10px;line-height:1.25}
 .target-card p{font-size:.84rem;line-height:1.65;color:var(--ink-soft)}
-.deliverables-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2px;background:var(--border);border:1px solid var(--border);border-radius:8px;overflow:hidden;max-width:900px;margin:56px auto 0}
-.deliverable{background:var(--cloud);padding:40px;transition:background .2s}
-.deliverable:hover{background:var(--white)}
-.d-num{font-family:var(--ff-serif);font-size:3.2rem;font-weight:300;color:var(--stone-dark);line-height:1;margin-bottom:16px}
-.deliverable h4{font-family:var(--ff-sans);font-size:.95rem;font-weight:500;color:var(--ink);margin-bottom:8px}
-.deliverable p{font-size:.86rem;line-height:1.65;color:var(--ink-soft)}
 .approche-split{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--border);border:1px solid var(--border);border-radius:8px;overflow:hidden}
 .approche-left{background:var(--white);padding:52px}
 .approche-right{background:var(--stone);padding:52px}
@@ -163,7 +151,7 @@ button{cursor:pointer;font-family:var(--ff-sans)}
 .faq-item.open .faq-icon{transform:rotate(45deg);background:var(--ink);border-color:var(--ink)}
 .faq-item.open .faq-icon svg{stroke:white}
 .faq-answer{max-height:0;overflow:hidden;transition:max-height .4s var(--ease-out)}
-.faq-item.open .faq-answer{max-height:300px}
+.faq-item.open .faq-answer{max-height:400px}
 .faq-answer-inner{padding-bottom:22px;font-size:.9rem;line-height:1.75;color:var(--ink-soft)}
 #contact{background:var(--stone)}
 .contact-grid{display:grid;grid-template-columns:1fr 480px;gap:80px;align-items:start}
@@ -197,19 +185,25 @@ footer{background:var(--ink);padding:40px 0}
 .footer-links a{font-size:.78rem;color:rgba(163,180,196,.45);transition:color .2s}
 .footer-links a:hover{color:rgba(163,180,196,.8)}
 .footer-copy{font-size:.72rem;color:rgba(163,180,196,.3)}
+.mentions-page{max-width:800px;margin:0 auto;padding:120px 40px 80px;display:none}
+.mentions-page.active{display:block}
+.mentions-page h1{font-family:var(--ff-serif);font-size:2rem;font-weight:300;color:var(--ink);margin-bottom:40px}
+.mentions-page h2{font-family:var(--ff-sans);font-size:1rem;font-weight:500;color:var(--ink);margin:32px 0 12px}
+.mentions-page p{font-size:.9rem;line-height:1.75;color:var(--ink-soft);margin-bottom:12px}
+.main-content{display:block}
 [data-reveal]{opacity:0;transform:translateY(30px);transition:opacity .7s var(--ease-out),transform .7s var(--ease-out)}
 [data-reveal].revealed{opacity:1;transform:none}
 [data-delay="1"]{transition-delay:.1s}[data-delay="2"]{transition-delay:.2s}[data-delay="3"]{transition-delay:.3s}[data-delay="4"]{transition-delay:.4s}
-@media(max-width:1040px){.hero-grid{grid-template-columns:1fr;gap:48px}.hero-aside{flex-direction:row}.stat-pill{flex:1}.constat-layout{grid-template-columns:1fr;gap:40px}.offre-wrap{grid-template-columns:1fr;gap:48px}.contact-grid{grid-template-columns:1fr;gap:48px}.approche-split{grid-template-columns:1fr}}
-@media(max-width:760px){.wrap,.wrap--narrow,.wrap--mid{padding:0 20px}.nav-inner{padding:0 20px}.nav-link{display:none}.section{padding:72px 0}.signals-grid{grid-template-columns:1fr 1fr}.targets-grid{grid-template-columns:1fr}.deliverables-grid{grid-template-columns:1fr}.form-row{grid-template-columns:1fr}.hero-actions{flex-direction:column}.hero-aside{flex-direction:column}.conf-inner{grid-template-columns:1fr;text-align:center}.conf-icon-wrap{margin:0 auto}.footer-links{display:none}.approche-left,.approche-right{padding:36px 28px}.hero-grid{padding:0 20px}}
-@media(max-width:500px){.signals-grid{grid-template-columns:1fr}.hero-title{font-size:2.6rem}}
+@media(max-width:1040px){.hero-grid{grid-template-columns:1fr;gap:48px}.hero-aside{flex-direction:row}.stat-pill{flex:1}.constat-layout{grid-template-columns:1fr;gap:40px}.offre-wrap{grid-template-columns:1fr;gap:48px}.contact-grid{grid-template-columns:1fr;gap:48px}.approche-split{grid-template-columns:1fr}.steps-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:760px){.wrap,.wrap--narrow,.wrap--mid{padding:0 20px}.nav-inner{padding:0 20px}.nav-link{display:none}.section{padding:72px 0}.targets-grid{grid-template-columns:1fr}.form-row{grid-template-columns:1fr}.hero-actions{flex-direction:column}.hero-aside{flex-direction:column}.conf-inner{grid-template-columns:1fr;text-align:center}.conf-icon-wrap{margin:0 auto}.footer-links{display:none}.approche-left,.approche-right{padding:36px 28px}.hero-grid{padding:0 20px}.steps-grid{grid-template-columns:1fr}}
+@media(max-width:500px){.hero-title{font-size:2.6rem}}
 </style>
 </head>
 <body>
 
 <nav id="nav">
   <div class="nav-inner">
-    <a href="#" class="logo">Clear<em>Mind</em></a>
+    <a href="#" onclick="showMain()" class="logo">Clear<em>Mind</em></a>
     <div class="nav-right">
       <a href="#offre" class="nav-link">L'offre</a>
       <a href="#pour-qui" class="nav-link">Pour qui</a>
@@ -219,19 +213,21 @@ footer{background:var(--ink);padding:40px 0}
   </div>
 </nav>
 
+<div class="main-content" id="main-content">
+
 <section id="hero">
   <div class="hero-grid">
     <div class="hero-left">
       <div class="hero-badge">
         <span class="hero-badge-dot"></span>
-        Conseil RH — Difficultés invisibles au travail
+        Conseil RH, difficultés invisibles au travail
       </div>
       <h1 class="hero-title">
-        Certains freins<br/>au travail ne<br/>sont pas visibles.<br/>
-        <em>Ils sont pourtant réels.</em>
+        Vous avez une situation<br/>dans vos équipes que<br/>vous ne savez pas nommer.<br/>
+        <em>ClearMind vous aide à la lire.</em>
       </h1>
       <p class="hero-sub">
-        Certaines situations dans vos équipes restent sans réponse. Pas par manque d'attention — parce qu'elles n'entrent pas dans les cadres habituels.<br/><br/>
+        Certaines situations restent sans réponse. Pas par manque d'attention, parce qu'elles n'entrent pas dans les cadres habituels.<br/><br/>
         <strong>ClearMind accompagne les équipes RH pour lire les difficultés invisibles au travail et décider avec clarté.</strong>
       </p>
       <div class="hero-actions">
@@ -244,30 +240,33 @@ footer{background:var(--ink);padding:40px 0}
       <div class="hero-proof">
         <div class="proof-item">
           <div class="proof-check"><svg width="9" height="9" viewBox="0 0 9 9" fill="none" stroke="#7A9E82" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1.5 4.5L3.5 6.5L7.5 2.5"/></svg></div>
-          Approche non médicale — conseil RH structuré, orienté décision
+          Approche non médicale, conseil RH structuré et orienté décision
         </div>
         <div class="proof-item">
           <div class="proof-check"><svg width="9" height="9" viewBox="0 0 9 9" fill="none" stroke="#7A9E82" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1.5 4.5L3.5 6.5L7.5 2.5"/></svg></div>
-          Compatible avec vos démarches RH, QVT et politique OETH
+          Né du terrain, pas du conseil théorique
         </div>
         <div class="proof-item">
           <div class="proof-check"><svg width="9" height="9" viewBox="0 0 9 9" fill="none" stroke="#7A9E82" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1.5 4.5L3.5 6.5L7.5 2.5"/></svg></div>
-          Hors Qualiopi — budgétable sur poste conseil ou QVT
+          Compatible avec vos démarches OETH, QVT et politique handicap
         </div>
       </div>
     </div>
     <div class="hero-aside">
       <div class="stat-pill">
-        <div class="num">1/5</div>
-        <div class="label">salariés présente des difficultés cognitives significatives liées à l'écrit ou à la concentration</div>
+        <div class="num">1/10</div>
+        <div class="label">salariés présente un trouble DYS ou TDAH, dont la majorité n'a jamais été identifiée en entreprise</div>
+        <div class="source">Source : HAS / Fédération Française des DYS</div>
       </div>
       <div class="stat-pill">
         <div class="num">80%</div>
-        <div class="label">des situations de handicap invisible n'ont jamais été formellement identifiées en entreprise</div>
+        <div class="label">des handicaps sont invisibles, sur 12 millions de personnes handicapées en France</div>
+        <div class="source">Source : APF France Handicap / Ministère chargé du Handicap</div>
       </div>
       <div class="stat-pill">
-        <div class="num">0</div>
-        <div class="label">dispositif dédié sur ce sujet dans la grande majorité des politiques RH actuelles</div>
+        <div class="num">54%</div>
+        <div class="label">des actifs dyslexiques déclarent que leur trouble reste un frein à leur évolution professionnelle</div>
+        <div class="source">Source : Enquête CSA pour LinkedIn France, 2023</div>
       </div>
     </div>
   </div>
@@ -278,35 +277,61 @@ footer{background:var(--ink);padding:40px 0}
     <div class="constat-layout">
       <div class="constat-text">
         <div class="t-eyebrow" data-reveal>Le constat</div>
-        <h2 class="t-display t-h2" data-reveal data-delay="1">Un angle mort dans la plupart des politiques RH</h2>
-        <p class="t-body" data-reveal data-delay="2">Les entreprises ont aujourd'hui des dispositifs solides sur la santé mentale, les risques psychosociaux et l'ergonomie. Il reste pourtant un angle mort persistant : les difficultés cognitives et les troubles de l'écrit.</p>
-        <p class="t-body" data-reveal data-delay="2">Lenteur de traitement, fatigue mentale sur les tâches rédactionnelles, erreurs récurrentes, concentration altérée — ces signaux sont présents dans toutes les organisations. Ils sont peu nommés, souvent mal interprétés, et rarement accompagnés.</p>
-        <p class="t-body" data-reveal data-delay="2">Le coût humain et opérationnel est réel. Il reste, pour l'instant, non mesuré — et donc non traité.</p>
+        <h2 class="t-display t-h2" data-reveal data-delay="1">Avant de chercher en externe, vérifiez ce qui est déjà là</h2>
+        <p class="t-body" data-reveal data-delay="2">Dans beaucoup d'entreprises, les collaborateurs concernés par un trouble cognitif invisible sont déjà dans les équipes. Dyslexie, TDAH, dyscalculie : des situations non diagnostiquées, jamais nommées, qui impactent silencieusement la performance et le confort de travail depuis des années.</p>
+        <p class="t-body" data-reveal data-delay="2">Le problème n'est pas l'absence de solution. C'est l'absence de lecture. Personne pour faire le lien entre ce que le manager observe et ce que cela signifie réellement.</p>
+        <p class="t-body" data-reveal data-delay="2">Un trouble non traité ne disparaît pas. Il coûte : en erreurs répétées, en fatigue cognitive, en turnover silencieux. Intervenir tôt coûte moins cher que gérer la crise.</p>
       </div>
       <div class="constat-stack" data-reveal data-delay="3">
-        <div class="insight-card"><h4>Une zone blanche dans les bilans santé</h4><p>La plupart des bilans de santé au travail ne comprennent aucune exploration des fonctions cognitives liées à la lecture, à l'écrit ou à la concentration.</p></div>
-        <div class="insight-card"><h4>Des situations invisibles, pas inexistantes</h4><p>De nombreux salariés s'adaptent en silence depuis des années. L'absence de nom ne signifie pas l'absence de difficulté — ni l'absence d'impact.</p></div>
-        <div class="insight-card"><h4>Un impact sur la performance collective</h4><p>Temps perdu sur des tâches simples, erreurs évitables, irritabilité, fatigue : des effets mesurables sur l'efficacité individuelle et d'équipe.</p></div>
-        <div class="insight-card"><h4>Un levier cohérent avec votre OETH</h4><p>Agir sur le handicap invisible, c'est donner de la profondeur et de la crédibilité à votre engagement handicap — au-delà des indicateurs habituels.</p></div>
+        <div class="insight-card">
+          <h4>Un angle mort dans les politiques OETH</h4>
+          <p>Les réponses sont souvent déjà dans l'effectif. Avant de dépenser en externe, vérifiez qui dans vos équipes pourrait bénéficier d'un accompagnement adapté.</p>
+        </div>
+        <div class="insight-card">
+          <h4>Des situations invisibles, pas inexistantes</h4>
+          <p>De nombreux salariés s'adaptent en silence depuis des années. L'absence de nom ne signifie pas l'absence de difficulté, ni l'absence d'impact.</p>
+        </div>
+        <div class="insight-card">
+          <h4>Un coût humain et opérationnel réel</h4>
+          <p>Temps perdu sur des tâches simples, erreurs évitables, irritabilité, fatigue : des effets mesurables sur l'efficacité individuelle et collective.</p>
+        </div>
+        <div class="insight-card">
+          <h4>6 à 18 mois d'attente chez l'orthophoniste</h4>
+          <p>Les ressources existent mais sont saturées. Savoir où elles sont et comment y accéder fait déjà une différence concrète pour vos collaborateurs. <span style="font-size:.75rem;color:var(--ink-muted)">(Source : INSEE / FNO)</span></p>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section section--stone" id="signaux">
+<section class="section section--stone" id="comment">
   <div class="wrap">
     <div class="section-head section-head--center">
-      <div class="t-eyebrow" data-reveal style="justify-content:center">Les signaux invisibles</div>
-      <h2 class="t-display t-h2" style="color:var(--ink);margin:20px auto 16px;max-width:560px" data-reveal data-delay="1">Ce que vos équipes vivent peut-être, sans le dire</h2>
-      <p class="t-body" style="max-width:520px;margin:0 auto" data-reveal data-delay="2">Ces situations existent dans toutes les entreprises. Elles se manifestent rarement de façon évidente — et sont rarement nommées comme des difficultés à traiter.</p>
+      <div class="t-eyebrow" data-reveal style="justify-content:center">Comment ça se passe</div>
+      <h2 class="t-display t-h2" style="color:var(--ink);margin:20px auto 16px;max-width:560px" data-reveal data-delay="1">Une mission en 4 étapes</h2>
+      <p class="t-body" style="max-width:520px;margin:0 auto" data-reveal data-delay="2">ClearMind n'intervient pas auprès des collaborateurs directement. Nous travaillons avec vous, côté employeur, pour vous donner les clés de compréhension et de décision.</p>
     </div>
-    <div class="signals-grid" data-reveal data-delay="2">
-      <div class="signal-cell"><div class="signal-num">01</div><h4>Difficultés persistantes à l'écrit</h4><p>Rédiger un e-mail, remplir un document, formuler une réponse claire : des tâches quotidiennes qui deviennent épuisantes pour certains collaborateurs, sans qu'on en comprenne la cause.</p></div>
-      <div class="signal-cell"><div class="signal-num">02</div><h4>Relecture excessive et erreurs répétées</h4><p>Besoin de relire plusieurs fois avant d'envoyer, erreurs récurrentes malgré la vigilance, sentiment chronique de ne jamais être sûr de soi dans les écrits professionnels.</p></div>
-      <div class="signal-cell"><div class="signal-num">03</div><h4>Fatigue cognitive rapide</h4><p>Épuisement après de courtes sessions de concentration, difficulté à maintenir l'attention sur des documents complexes, baisse de rendement en fin de journée.</p></div>
-      <div class="signal-cell"><div class="signal-num">04</div><h4>Lenteur inexpliquée sur certaines tâches</h4><p>Un collaborateur compétent qui prend deux à trois fois plus de temps que ses pairs sur des tâches administratives ou rédactionnelles pourtant simples.</p></div>
-      <div class="signal-cell"><div class="signal-num">05</div><h4>Silences et stratégies d'évitement</h4><p>Délégation systématique des écrits, évitement des comptes rendus, discrétion totale sur ses difficultés — par crainte du jugement ou par habitude de compensation.</p></div>
-      <div class="signal-cell"><div class="signal-num">06</div><h4>Handicap invisible non reconnu</h4><p>Des situations qui répondent aux critères du handicap — dyslexie, TDAH, dyscalculie — mais qui n'ont jamais été identifiées, nommées ni accompagnées en entreprise.</p></div>
+    <div class="steps-grid" data-reveal data-delay="2">
+      <div class="step-cell">
+        <div class="step-num">01</div>
+        <h4>Échange de cadrage</h4>
+        <p>Vous présentez la situation. Nous posons les bonnes questions pour comprendre le contexte, les signaux observés et les enjeux RH associés.</p>
+      </div>
+      <div class="step-cell">
+        <div class="step-num">02</div>
+        <h4>Analyse experte</h4>
+        <p>Nous lisons la situation à travers notre grille d'expertise : signaux cognitifs, contexte organisationnel, historique RH. Pas de diagnostic médical, une lecture structurée.</p>
+      </div>
+      <div class="step-cell">
+        <div class="step-num">03</div>
+        <h4>Restitution écrite</h4>
+        <p>Vous recevez un document clair : ce que nous avons compris, ce que cela peut signifier, et trois recommandations concrètes pour agir. Ce document vous appartient.</p>
+      </div>
+      <div class="step-cell">
+        <div class="step-num">04</div>
+        <h4>Questions et suite</h4>
+        <p>Une séance d'échange pour répondre à vos questions. Si des ressources complémentaires existent pour aller plus loin, nous vous les indiquons. La décision reste la vôtre.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -316,13 +341,13 @@ footer{background:var(--ink);padding:40px 0}
     <div class="offre-wrap">
       <div class="offre-main">
         <div class="t-eyebrow" style="color:var(--sage-light)" data-reveal>L'offre</div>
-        <h2 class="t-display t-h2" style="color:var(--white);margin:20px 0 24px" data-reveal data-delay="1">ClearMind<br/>Conseil RH</h2>
-        <p style="font-size:1.02rem;line-height:1.75;color:rgba(163,180,196,.8);margin-bottom:16px" data-reveal data-delay="2">Trois niveaux d'intervention, conçus pour s'adapter à votre situation et à votre rythme.</p>
-        <p style="font-size:.95rem;line-height:1.75;color:rgba(163,180,196,.7)" data-reveal data-delay="2">Analytique, structuré — pas médical. Nous aidons la DRH à comprendre ce qui se passe, distinguer les causes, et décider avec justesse.</p>
+        <h2 class="t-display t-h2" style="color:var(--white);margin:20px 0 24px" data-reveal data-delay="1">Trois niveaux d'intervention</h2>
+        <p style="font-size:1.02rem;line-height:1.75;color:rgba(163,180,196,.8);margin-bottom:16px" data-reveal data-delay="2">Pas un rapport générique. Une lecture experte de votre situation et une réponse claire à "qu'est-ce qu'on fait ?"</p>
+        <p style="font-size:.95rem;line-height:1.75;color:rgba(163,180,196,.7)" data-reveal data-delay="2">Notre intervention ne crée aucune obligation pour l'entreprise et ne génère aucun document opposable. Ce que nous livrons vous appartient. Vous décidez seul de ce que vous en faites.</p>
         <div class="offre-include" data-reveal data-delay="3">
           <div class="include-item"><div class="include-dot"><svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="#7A9E82" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 5l2.5 2.5L8 2.5"/></svg></div>Comprendre ce qui se passe réellement dans une situation complexe</div>
           <div class="include-item"><div class="include-dot"><svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="#7A9E82" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 5l2.5 2.5L8 2.5"/></svg></div>Distinguer ce qui relève du management, de l'organisation ou d'un trouble invisible</div>
-          <div class="include-item"><div class="include-dot"><svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="#7A9E82" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 5l2.5 2.5L8 2.5"/></svg></div>Prendre des décisions RH éclairées — aménagement, mobilité, accompagnement</div>
+          <div class="include-item"><div class="include-dot"><svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="#7A9E82" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 5l2.5 2.5L8 2.5"/></svg></div>Prendre des décisions RH éclairées : aménagement, mobilité, accompagnement</div>
           <div class="include-item"><div class="include-dot"><svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="#7A9E82" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 5l2.5 2.5L8 2.5"/></svg></div>Structurer une politique interne cohérente sur le handicap invisible</div>
         </div>
         <div style="margin-top:36px" data-reveal data-delay="3">
@@ -332,12 +357,12 @@ footer{background:var(--ink);padding:40px 0}
       <div data-reveal data-delay="2">
         <div class="steps-card">
           <div class="steps-card-head">Trois niveaux d'intervention</div>
-          <div class="step-row"><div class="step-n">1</div><div class="step-body"><h5>Éclairage</h5><p>Lecture structurée d'une situation isolée. Entretien de cadrage, analyse, restitution écrite + 3 recommandations concrètes. Sans engagement.</p></div></div>
-          <div class="step-row"><div class="step-n">2</div><div class="step-body"><h5>Accompagnement</h5><p>Suivi mensuel sur 3 ou 6 mois. 2 séances/mois, appui rédaction RH, veille OETH trimestrielle, accès aux ressources ClearMind.</p></div></div>
-          <div class="step-row"><div class="step-n">3</div><div class="step-body"><h5>Programme</h5><p>Démarche organisationnelle sur 6 mois. Audit politique handicap/QVT, protocole interne co-construit, sensibilisation managers.</p></div></div>
-          <div class="price-band">
-            <div><div class="amount">900 €<span>HT</span></div></div>
-            <div class="note">À partir de — niveau Éclairage<br/>Sans engagement</div>
+          <div class="step-row"><div class="step-n">1</div><div class="step-body"><h5>Éclairage</h5><p>Lecture structurée d'une situation isolée. Entretien de cadrage, analyse, restitution écrite avec recommandations concrètes. Sans engagement.</p></div></div>
+          <div class="step-row"><div class="step-n">2</div><div class="step-body"><h5>Accompagnement</h5><p>Suivi mensuel sur 3 ou 6 mois. Plusieurs situations, appui rédaction RH, veille OETH trimestrielle, accès aux ressources ClearMind.</p></div></div>
+          <div class="step-row"><div class="step-n">3</div><div class="step-body"><h5>Programme</h5><p>Démarche organisationnelle sur 6 mois. Audit politique handicap et QVT, protocole interne co-construit, sensibilisation managers.</p></div></div>
+          <div class="price-entry">
+            <p>Premier échange offert, sans engagement</p>
+            <a href="#contact" class="cta-link">Nous contacter pour un devis</a>
           </div>
         </div>
       </div>
@@ -349,16 +374,16 @@ footer{background:var(--ink);padding:40px 0}
   <div class="wrap">
     <div class="section-head" style="max-width:580px">
       <div class="t-eyebrow" data-reveal>Pour qui</div>
-      <h2 class="t-display t-h2" style="color:var(--ink);margin:20px 0 16px" data-reveal data-delay="1">Pensé pour les décideurs qui agissent en amont</h2>
-      <p class="t-body" data-reveal data-delay="2">Que vous soyez dans une PME de 50 personnes ou dans une ETI, l'enjeu est le même : mieux comprendre ce qui se passe, pour mieux agir — avant que les situations ne se dégradent.</p>
+      <h2 class="t-display t-h2" style="color:var(--ink);margin:20px 0 16px" data-reveal data-delay="1">Pensé pour ceux qui font face à ce que les outils RH ne voient pas</h2>
+      <p class="t-body" data-reveal data-delay="2">Que vous soyez dans une PME de 50 personnes ou dans une ETI, l'enjeu est le même : mieux comprendre ce qui se passe, pour mieux agir, avant que les situations ne se dégradent.</p>
     </div>
     <div class="targets-grid">
-      <div class="target-card" data-reveal data-delay="1"><div class="target-role">Ressources humaines</div><h4>DRH &amp; Responsables RH</h4><p>Vous cherchez des outils concrets pour aller plus loin que la médecine du travail sur des sujets encore peu outillés — et apporter une vraie valeur à vos collaborateurs.</p></div>
+      <div class="target-card" data-reveal data-delay="1"><div class="target-role">Ressources humaines</div><h4>DRH et Responsables RH</h4><p>Vous faites face à une situation que vous ne savez pas nommer. Ni motivation, ni organisation : quelque chose d'autre que vous ne pouvez pas identifier avec vos outils habituels.</p></div>
       <div class="target-card" data-reveal data-delay="2"><div class="target-role">Politique handicap</div><h4>Référents handicap</h4><p>Vous souhaitez donner de la substance à votre démarche OETH en agissant sur des situations réelles mais invisibles, souvent hors des radars habituels.</p></div>
-      <div class="target-card" data-reveal data-delay="3"><div class="target-role">Qualité de vie au travail</div><h4>Responsables QVT</h4><p>Vous voulez compléter vos dispositifs bien-être par des actions ancrées dans la réalité cognitive des collaborateurs — pas seulement leur ressenti déclaratif.</p></div>
-      <div class="target-card" data-reveal data-delay="1"><div class="target-role">Direction</div><h4>DG &amp; Dirigeants de PME</h4><p>Vous souhaitez comprendre ce qui freine certains membres de vos équipes, sans y mettre des mots inappropriés ni engager des moyens lourds.</p></div>
-      <div class="target-card" data-reveal data-delay="2"><div class="target-role">Secteur public</div><h4>Collectivités &amp; Établissements publics</h4><p>Vous avez des obligations de prévention et d'accompagnement des agents. Cette offre s'inscrit dans ce cadre avec une approche adaptée aux contraintes du service public.</p></div>
-      <div class="target-card" data-reveal data-delay="3"><div class="target-role">Structures médico-sociales</div><h4>Établissements parapublics</h4><p>Vous faites face à des enjeux spécifiques de charge cognitive et de prévention des risques professionnels, souvent amplifiés par la nature exigeante de vos métiers.</p></div>
+      <div class="target-card" data-reveal data-delay="3"><div class="target-role">Qualité de vie au travail</div><h4>Responsables QVT</h4><p>Vous voulez compléter vos dispositifs par des actions ancrées dans la réalité cognitive des collaborateurs, pas seulement dans leur ressenti déclaratif.</p></div>
+      <div class="target-card" data-reveal data-delay="1"><div class="target-role">Direction</div><h4>DG et Dirigeants de PME</h4><p>Vous souhaitez comprendre ce qui freine certains membres de vos équipes, sans engager des moyens lourds ni créer de précédent.</p></div>
+      <div class="target-card" data-reveal data-delay="2"><div class="target-role">Secteur public</div><h4>Collectivités et établissements publics</h4><p>Vous avez des obligations de prévention et d'accompagnement des agents. Cette offre s'inscrit dans ce cadre avec une approche adaptée aux contraintes du service public.</p></div>
+      <div class="target-card" data-reveal data-delay="3"><div class="target-role">Médico-social</div><h4>Structures parapubliques</h4><p>Vous faites face à des enjeux spécifiques de charge cognitive et de prévention, souvent amplifiés par la nature exigeante de vos métiers.</p></div>
     </div>
   </div>
 </section>
@@ -368,23 +393,24 @@ footer{background:var(--ink);padding:40px 0}
     <div class="approche-split" data-reveal>
       <div class="approche-left">
         <div class="t-eyebrow">Notre approche</div>
-        <h3 style="font-family:var(--ff-serif);font-size:clamp(1.4rem,2.2vw,2rem);font-weight:400;color:var(--ink);margin:20px 0 20px">Structuré. Discret.<br/>Concret.</h3>
-        <p>Notre approche repose sur une expertise spécialisée des troubles cognitifs et de l'écrit, mise au service d'une logique RH et de prévention — pas d'une logique médicale ou thérapeutique.</p>
-        <p>Nous travaillons à distance ou en présentiel selon votre organisation. La mission est menée avec la plus grande discrétion, dans une logique de compréhension et de prévention, pas d'étiquetage.</p>
-        <p>Les résultats vous appartiennent. Vous décidez de ce que vous en faites et de comment vous les utilisez en interne.</p>
+        <h3 style="font-family:var(--ff-serif);font-size:clamp(1.4rem,2.2vw,2rem);font-weight:400;color:var(--ink);margin:20px 0 20px">Né du terrain.<br/>Orienté décision.</h3>
+        <p>ClearMind est né de plusieurs années d'accompagnement terrain auprès de structures médico-sociales et de personnes en démarche MDPH. Nous connaissons les troubles DYS et TDAH dans leur réalité quotidienne au travail, pas dans les manuels.</p>
+        <p>Nous lisons les situations que les outils RH classiques ne savent pas nommer. Nous parlons le langage de la décision RH, pas de la clinique.</p>
+        <p>Si la situation le justifie, nous vous indiquons les ressources disponibles pour aller plus loin. La décision appartient toujours au collaborateur et à son médecin.</p>
         <div class="tags">
-          <span class="tag">Non médical</span><span class="tag">Confidentiel</span><span class="tag">Compatible OETH</span><span class="tag">Distanciel</span><span class="tag">Résultats actionnables</span><span class="tag">Hors Qualiopi</span>
+          <span class="tag">Non médical</span><span class="tag">Confidentiel</span><span class="tag">Compatible OETH</span><span class="tag">Orienté décision</span><span class="tag">Hors Qualiopi</span><span class="tag">Terrain</span>
         </div>
       </div>
       <div class="approche-right">
-        <p class="not-list-title">Ce que cette offre n'est pas</p>
+        <p class="not-list-title">Ce que ClearMind n'est pas</p>
         <ul class="not-list">
-          <li class="not-item"><span class="not-x">×</span>Un soin médical ou une consultation de santé</li>
           <li class="not-item"><span class="not-x">×</span>Un diagnostic médical ou psychiatrique</li>
-          <li class="not-item"><span class="not-x">×</span>Un outil de mise en cause ou d'exposition des salariés</li>
-          <li class="not-item"><span class="not-x">×</span>Une promesse de réduction directe de votre contribution AGEFIPH</li>
-          <li class="not-item"><span class="not-x">×</span>Un simple questionnaire ou un rapport générique</li>
-          <li class="not-item"><span class="not-x">×</span>Une démarche de développement personnel ou de bien-être</li>
+          <li class="not-item"><span class="not-x">×</span>Une prescription ou une orientation médicale</li>
+          <li class="not-item"><span class="not-x">×</span>Un outil d'étiquetage ou de mise en cause des salariés</li>
+          <li class="not-item"><span class="not-x">×</span>Un cabinet RH généraliste</li>
+          <li class="not-item"><span class="not-x">×</span>Une promesse de réduction AGEFIPH garantie</li>
+          <li class="not-item"><span class="not-x">×</span>Un document opposable ou créateur d'obligation</li>
+          <li class="not-item"><span class="not-x">×</span>Une démarche de développement personnel</li>
           <li class="not-item"><span class="not-x">×</span>Un dispositif destiné aux particuliers</li>
         </ul>
       </div>
@@ -398,8 +424,8 @@ footer{background:var(--ink);padding:40px 0}
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(184,212,188,.7)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
     </div>
     <div class="conf-text">
-      <h3>Confidentialité et discrétion au cœur de la démarche</h3>
-      <p>Toutes les informations recueillies sont traitées avec la plus stricte confidentialité. Notre approche est pensée pour ne jamais stigmatiser, exposer ou mettre en difficulté les collaborateurs. La restitution est destinée aux équipes RH et à elles seules.</p>
+      <h3>Confidentialité au coeur de la démarche</h3>
+      <p>Toutes les informations recueillies sont traitées avec la plus stricte confidentialité. Notre approche est pensée pour ne jamais stigmatiser, exposer ou mettre en difficulté les collaborateurs. La restitution est destinée aux équipes RH et à elles seules. Ce que nous livrons vous appartient : vous décidez de ce que vous en faites.</p>
     </div>
   </div>
 </div>
@@ -412,24 +438,28 @@ footer{background:var(--ink);padding:40px 0}
     </div>
     <div class="faq-list" data-reveal data-delay="2">
       <div class="faq-item open">
-        <button class="faq-btn" onclick="toggleFaq(this)"><span class="faq-q-text">En quoi ClearMind est différent d'un cabinet RH classique ?</span><span class="faq-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="#16202E" stroke-width="1.5" stroke-linecap="round"><path d="M6 1v10M1 6h10"/></svg></span></button>
-        <div class="faq-answer"><div class="faq-answer-inner">Un cabinet RH traite les processus. ClearMind traite ce que les processus ne voient pas : les difficultés invisibles qui freinent des collaborateurs et des décisions. Notre intervention n'est pas médicale — c'est du conseil RH structuré, orienté décision.</div></div>
+        <button class="faq-btn" onclick="toggleFaq(this)"><span class="faq-q-text">En quoi êtes-vous différents d'un cabinet RH classique ?</span><span class="faq-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="#16202E" stroke-width="1.5" stroke-linecap="round"><path d="M6 1v10M1 6h10"/></svg></span></button>
+        <div class="faq-answer"><div class="faq-answer-inner">Un cabinet RH traite les processus. ClearMind traite ce que les processus ne voient pas : les difficultés cognitives invisibles qui freinent des collaborateurs et bloquent des décisions. Notre expertise vient du terrain, pas du conseil théorique. Nous lisons les situations que les outils RH habituels ne savent pas nommer.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-btn" onclick="toggleFaq(this)"><span class="faq-q-text">Quelle est votre expertise sur ces sujets ?</span><span class="faq-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="#16202E" stroke-width="1.5" stroke-linecap="round"><path d="M6 1v10M1 6h10"/></svg></span></button>
+        <div class="faq-answer"><div class="faq-answer-inner">ClearMind est né de plusieurs années d'accompagnement terrain auprès de structures médico-sociales, avec une pratique concrète des troubles DYS, du TDAH et des démarches MDPH. Nous ne venons pas du conseil théorique mais de la réalité quotidienne de ces situations en entreprise et en structure spécialisée.</div></div>
       </div>
       <div class="faq-item">
         <button class="faq-btn" onclick="toggleFaq(this)"><span class="faq-q-text">On a déjà un médecin du travail. Pourquoi ClearMind ?</span><span class="faq-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="#16202E" stroke-width="1.5" stroke-linecap="round"><path d="M6 1v10M1 6h10"/></svg></span></button>
-        <div class="faq-answer"><div class="faq-answer-inner">ClearMind ne remplace pas le médecin du travail. Nous intervenons en amont, sur la lecture RH — pas sur le diagnostic médical. Nos interventions sont complémentaires et ne se substituent à aucun dispositif de santé au travail existant.</div></div>
+        <div class="faq-answer"><div class="faq-answer-inner">ClearMind ne remplace pas le médecin du travail. Nous intervenons en amont, sur la lecture RH de la situation, pas sur le diagnostic médical. La médecine du travail répond à la question "est-ce que cette personne est apte ?". Nous répondons à la question "qu'est-ce qui se passe et qu'est-ce qu'on fait ?".</div></div>
       </div>
       <div class="faq-item">
-        <button class="faq-btn" onclick="toggleFaq(this)"><span class="faq-q-text">Est-ce qu'on a besoin d'un budget spécifique ?</span><span class="faq-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="#16202E" stroke-width="1.5" stroke-linecap="round"><path d="M6 1v10M1 6h10"/></svg></span></button>
-        <div class="faq-answer"><div class="faq-answer-inner">Le niveau Éclairage démarre à 900 € HT, sans engagement — le coût d'une journée de conseil RH classique. ClearMind est une prestation de conseil RH, hors champ Qualiopi. Elle se budgète sur le poste conseil, QVT ou handicap.</div></div>
+        <button class="faq-btn" onclick="toggleFaq(this)"><span class="faq-q-text">Que se passe-t-il si un bilan ou une démarche MDPH s'impose ?</span><span class="faq-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="#16202E" stroke-width="1.5" stroke-linecap="round"><path d="M6 1v10M1 6h10"/></svg></span></button>
+        <div class="faq-answer"><div class="faq-answer-inner">Ce n'est pas notre rôle de prescrire quoi que ce soit. En revanche, si la situation le justifie, nous vous indiquons les ressources disponibles : il existe aujourd'hui des plateformes de bilans orthophoniques en visio avec des délais courts, contrairement aux 6 à 18 mois d'attente en cabinet classique. La décision appartient ensuite au collaborateur et à son médecin.</div></div>
       </div>
       <div class="faq-item">
         <button class="faq-btn" onclick="toggleFaq(this)"><span class="faq-q-text">Est-ce que cela s'articule avec notre politique OETH ?</span><span class="faq-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="#16202E" stroke-width="1.5" stroke-linecap="round"><path d="M6 1v10M1 6h10"/></svg></span></button>
-        <div class="faq-answer"><div class="faq-answer-inner">Oui. ClearMind contribue à identifier des situations de handicap invisible cohérentes avec une politique OETH structurée. Il ne garantit pas de réduction directe de votre contribution AGEFIPH, mais permet une approche plus complète et documentée de votre engagement handicap.</div></div>
+        <div class="faq-answer"><div class="faq-answer-inner">Oui. ClearMind aide à identifier des situations de handicap invisible cohérentes avec une politique OETH structurée. Avant de chercher en externe, nous vous aidons à voir ce qui existe déjà dans vos équipes. Nous ne garantissons pas de réduction de contribution AGEFIPH, mais nous vous permettons une approche plus complète et documentée de votre engagement handicap.</div></div>
       </div>
       <div class="faq-item">
-        <button class="faq-btn" onclick="toggleFaq(this)"><span class="faq-q-text">L'offre convient-elle aussi aux collectivités et au secteur public ?</span><span class="faq-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="#16202E" stroke-width="1.5" stroke-linecap="round"><path d="M6 1v10M1 6h10"/></svg></span></button>
-        <div class="faq-answer"><div class="faq-answer-inner">Tout à fait. Nous adaptons notre approche au contexte public — terminologie, mode d'intervention, format de restitution. L'offre est compatible avec les démarches de prévention des risques professionnels et les politiques d'accompagnement des agents.</div></div>
+        <button class="faq-btn" onclick="toggleFaq(this)"><span class="faq-q-text">Combien coûte une intervention et comment ça se budgète ?</span><span class="faq-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="#16202E" stroke-width="1.5" stroke-linecap="round"><path d="M6 1v10M1 6h10"/></svg></span></button>
+        <div class="faq-answer"><div class="faq-answer-inner">Nos missions débutent à partir de 1 800 euros HT pour un premier niveau Éclairage, sans engagement. ClearMind est une prestation de conseil RH, hors champ Qualiopi, budgétable sur votre poste conseil, QVT ou politique handicap. Contactez-nous pour un devis adapté à votre situation.</div></div>
       </div>
     </div>
   </div>
@@ -440,12 +470,12 @@ footer{background:var(--ink);padding:40px 0}
     <div class="contact-grid">
       <div class="contact-left">
         <div class="t-eyebrow" data-reveal>Contact</div>
-        <h2 class="t-display t-h2" style="color:var(--ink);margin:20px 0 20px" data-reveal data-delay="1">Échangeons sur<br/>votre situation</h2>
+        <h2 class="t-display t-h2" style="color:var(--ink);margin:20px 0 20px" data-reveal data-delay="1">Échangeons sur votre situation</h2>
         <p data-reveal data-delay="2">Vous souhaitez comprendre si cette offre est pertinente pour votre organisation ? Un échange de 30 minutes suffit souvent pour le savoir. Pas de pitch commercial : une conversation directe sur votre contexte et vos enjeux.</p>
         <div class="contact-promises" data-reveal data-delay="3">
-          <div class="promise"><div class="promise-icon">⏱</div><p><strong>Réponse sous 24h ouvrées</strong><br/>Nous revenons vers vous rapidement pour convenir d'un créneau.</p></div>
-          <div class="promise"><div class="promise-icon">🔒</div><p><strong>Échange confidentiel</strong><br/>Tout ce que vous partagez reste strictement entre nous.</p></div>
-          <div class="promise"><div class="promise-icon">🎯</div><p><strong>Sans engagement</strong><br/>Cet échange ne vous engage à rien. Il est fait pour vous permettre de décider en connaissance de cause.</p></div>
+          <div class="promise"><div class="promise-icon">⏱</div><p><strong>Réponse sous 24h ouvrées.</strong> Nous revenons vers vous rapidement pour convenir d'un créneau.</p></div>
+          <div class="promise"><div class="promise-icon">🔒</div><p><strong>Échange confidentiel.</strong> Tout ce que vous partagez reste strictement entre nous.</p></div>
+          <div class="promise"><div class="promise-icon">🎯</div><p><strong>Sans engagement.</strong> Cet échange ne vous engage à rien. Il est fait pour vous permettre de décider en connaissance de cause.</p></div>
         </div>
       </div>
       <div data-reveal data-delay="2">
@@ -492,24 +522,84 @@ footer{background:var(--ink);padding:40px 0}
       <a href="#pour-qui">Pour qui</a>
       <a href="#faq">FAQ</a>
       <a href="#contact">Contact</a>
+      <a href="#" onclick="showMentions();return false;">Mentions légales</a>
     </div>
-    <div class="footer-copy">© 2026 ClearMind — VEX Consult SASU · contact@clearmind-conseil.fr</div>
+    <div class="footer-copy">© 2026 ClearMind, VEX Consult SASU</div>
   </div>
 </footer>
+
+</div>
+
+<div class="mentions-page" id="mentions-page">
+  <a href="#" onclick="showMain();return false;" style="display:inline-flex;align-items:center;gap:8px;font-size:.85rem;color:var(--ink-soft);margin-bottom:48px">
+    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 7H2M7 2L2 7l5 5"/></svg>
+    Retour au site
+  </a>
+  <h1>Mentions légales</h1>
+
+  <h2>Éditeur du site</h2>
+  <p>Le site clearmind-conseil.fr est édité par :</p>
+  <p><strong>VEX Consult SASU</strong><br/>
+  Société par actions simplifiée unipersonnelle<br/>
+  Capital social : 1 000 €<br/>
+  SIREN : 989 368 345<br/>
+  SIRET (siège) : 989 368 345 00017<br/>
+  Numéro de TVA intracommunautaire : FR10989368345<br/>
+  RCS Créteil : 989 368 345 R.C.S. Créteil<br/>
+  Siège social : 34 rue Louis Auroux, 94120 Fontenay-sous-Bois<br/>
+  Directeur de publication : Nathan Hagege</p>
+
+  <h2>Contact</h2>
+  <p>contact@clearmind-conseil.fr<br/>www.clearmind-conseil.fr</p>
+
+  <h2>Hébergement</h2>
+  <p><strong>GitHub Pages</strong><br/>
+  GitHub Inc.<br/>
+  88 Colin P. Kelly Jr. Street<br/>
+  San Francisco, CA 94107, États-Unis<br/>
+  github.com</p>
+
+  <h2>Propriété intellectuelle</h2>
+  <p>L'ensemble des contenus présents sur ce site (textes, visuels, structure) est la propriété exclusive de VEX Consult SASU. Toute reproduction, représentation ou diffusion, en tout ou partie, est interdite sans autorisation préalable écrite.</p>
+
+  <h2>Données personnelles</h2>
+  <p>Les informations recueillies via le formulaire de contact sont destinées exclusivement à VEX Consult SASU pour répondre à vos demandes. Elles ne font l'objet d'aucune cession à des tiers. Conformément au RGPD et à la loi Informatique et Libertés, vous disposez d'un droit d'accès, de rectification et de suppression de vos données en écrivant à contact@clearmind-conseil.fr.</p>
+
+  <h2>Cookies</h2>
+  <p>Ce site n'utilise pas de cookies de traçage ou de mesure d'audience.</p>
+
+  <h2>Responsabilité</h2>
+  <p>Les informations présentées sur ce site ont un caractère général et informatif. Elles ne constituent en aucun cas un diagnostic médical, une consultation de santé ou un avis juridique. VEX Consult SASU ne saurait être tenu responsable de l'utilisation qui serait faite de ces informations.</p>
+</div>
 
 <script>
 const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 60); }, { passive: true });
+
 function toggleFaq(btn) {
   const item = btn.closest('.faq-item');
   const isOpen = item.classList.contains('open');
   document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
   if (!isOpen) item.classList.add('open');
 }
+
 const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('revealed'); revealObserver.unobserve(e.target); } });
 }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
 document.querySelectorAll('[data-reveal]').forEach(el => revealObserver.observe(el));
+
+function showMentions() {
+  document.getElementById('main-content').style.display = 'none';
+  document.getElementById('mentions-page').classList.add('active');
+  window.scrollTo(0, 0);
+}
+
+function showMain() {
+  document.getElementById('main-content').style.display = 'block';
+  document.getElementById('mentions-page').classList.remove('active');
+  window.scrollTo(0, 0);
+}
+
 async function submitForm() {
   const prenom = document.getElementById('f-prenom').value.trim();
   const email  = document.getElementById('f-email').value.trim();
@@ -542,12 +632,10 @@ async function submitForm() {
     } else {
       btn.textContent = 'Envoyer ma demande';
       btn.disabled = false;
-      alert('Une erreur est survenue. Veuillez réessayer ou nous écrire directement.');
     }
   } catch(e) {
     btn.textContent = 'Envoyer ma demande';
     btn.disabled = false;
-    alert('Une erreur est survenue. Veuillez réessayer ou nous écrire directement.');
   }
 }
 </script>

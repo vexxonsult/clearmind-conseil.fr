@@ -28,8 +28,8 @@ button{cursor:pointer;font-family:var(--sans);border:none}
 #nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:22px 0;transition:all .35s var(--ease)}
 #nav.scrolled{background:rgba(249,248,245,.95);backdrop-filter:blur(12px);border-bottom:1px solid rgba(22,32,46,.08);padding:14px 0}
 .nav-inner{max-width:1200px;margin:0 auto;padding:0 48px;display:flex;align-items:center;justify-content:space-between}
-.logo{display:flex;align-items:center;transition:all .3s} .logo-img{height:32px;width:auto;filter:brightness(0) invert(1);transition:filter .3s}
-#nav.scrolled .logo-img{filter:none}
+.logo{font-family:var(--serif);font-size:1.6rem;font-weight:300;color:var(--white);letter-spacing:.02em;transition:color .3s}
+#nav.scrolled .logo{color:var(--ink)}.logo em{font-style:italic;color:var(--sage-light);transition:color .3s}#nav.scrolled .logo em{color:var(--sage)}
 
 
 .nav-links{display:flex;gap:32px;align-items:center}
@@ -214,7 +214,7 @@ button{cursor:pointer;font-family:var(--sans);border:none}
 /* ── FOOTER ─────────────────────────────────────────────── */
 footer{background:#0E1620;padding:40px 0}
 .footer-inner{max-width:1200px;margin:0 auto;padding:0 48px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
-.footer-logo{display:flex;align-items:center} .footer-logo .logo-img{height:28px;width:auto;filter:brightness(0) invert(1);opacity:.6}
+.footer-logo{font-family:var(--serif);font-size:1.4rem;font-weight:300;color:rgba(255,255,255,.6)}.footer-logo em{font-style:italic;color:var(--sage)}
 
 .footer-links{display:flex;gap:24px}
 .footer-links a{font-size:.78rem;color:rgba(163,180,196,.35);transition:color .2s}
@@ -265,7 +265,7 @@ footer{background:#0E1620;padding:40px 0}
 
 <nav id="nav">
   <div class="nav-inner">
-    <a href="#" onclick="showMain()" class="logo"><img src="logo-email.png" alt="ClearMind" class="logo-img"/></a>
+    <a href="#" onclick="showMain()" class="logo">Clear<em>Mind</em></a>
     <div class="nav-links">
       <a href="#offre" class="nav-link">L'offre</a>
       <a href="#pour-qui" class="nav-link">Pour qui</a>
@@ -575,7 +575,7 @@ footer{background:#0E1620;padding:40px 0}
 
 <footer>
   <div class="footer-inner">
-    <div class="footer-logo"><img src="logo-email.png" alt="ClearMind" class="logo-img"/></div>
+    <div class="footer-logo">Clear<em>Mind</em></div>
     <div class="footer-links">
       <a href="#constat">Le constat</a>
       <a href="#offre">L'offre</a>

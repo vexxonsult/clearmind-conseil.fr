@@ -54,8 +54,8 @@ button{cursor:pointer;font-family:var(--sans);border:none}
 .hero-btn-secondary{background:rgba(255,255,255,.08);color:rgba(255,255,255,.85);border:1px solid rgba(255,255,255,.15)}
 .hero-btn-secondary:hover{background:rgba(255,255,255,.12)}
 
-.hero-right{background:linear-gradient(135deg,rgba(122,158,130,.08),rgba(122,158,130,.02));position:relative;display:flex;align-items:center;justify-content:center;padding:64px 48px}
-.hero-visual{width:100%;max-width:360px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:24px;padding:40px 32px;backdrop-filter:blur(20px)}
+.hero-right{background:linear-gradient(135deg,rgba(122,158,130,.10),rgba(122,158,130,.03));position:relative;display:flex;align-items:stretch;justify-content:center;padding:0}
+.hero-visual{width:100%;background:rgba(255,255,255,.05);border-left:1px solid rgba(255,255,255,.10);padding:140px 48px 80px;display:flex;flex-direction:column;justify-content:center}
 .visual-item{margin-bottom:32px}
 .visual-item:last-child{margin-bottom:0}
 .visual-label{font-size:.75rem;font-weight:500;color:var(--sage-light);text-transform:uppercase;letter-spacing:.12em;margin-bottom:8px}
@@ -64,8 +64,9 @@ button{cursor:pointer;font-family:var(--sans);border:none}
 .visual-desc{font-size:.88rem;color:rgba(163,180,196,.7);margin-top:8px;line-height:1.5}
 
 /* SECTIONS */
-section{padding:120px 0;opacity:0;transform:translateY(30px);transition:all .8s var(--ease)}
-section.on{opacity:1;transform:translateY(0)}
+section{padding:120px 0}
+[data-reveal]{opacity:0;transform:translateY(30px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+[data-reveal].on{opacity:1;transform:translateY(0)}
 .container{max-width:1200px;margin:0 auto;padding:0 48px}
 .section-tag{font-size:.72rem;font-weight:500;color:var(--sage-d);text-transform:uppercase;letter-spacing:.14em;margin-bottom:16px}
 .section-title{font-family:var(--serif);font-size:clamp(2.4rem,4vw,3.6rem);font-weight:300;color:var(--ink);line-height:1.15;margin-bottom:24px}
@@ -155,7 +156,8 @@ footer{background:var(--ink);color:rgba(255,255,255,.7);padding:80px 0 40px;text
 @media(max-width:900px){
   #hero{grid-template-columns:1fr;min-height:auto}
   .hero-left{padding:80px 32px 60px}
-  .hero-right{padding:48px 32px;border-top:1px solid rgba(255,255,255,.1)}
+  .hero-right{border-top:1px solid rgba(255,255,255,.1)}
+  .hero-visual{padding:48px 32px}
   .problem-grid,.process-steps{grid-template-columns:1fr;gap:24px}
   .step-arrow{display:none}
   .form-grid{grid-template-columns:1fr}
@@ -432,10 +434,18 @@ footer{background:var(--ink);color:rgba(255,255,255,.7);padding:80px 0 40px;text
 
 <script>
 // Scroll reveal
-const obs=new IntersectionObserver(entries=>{
-  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');obs.unobserve(e.target)}});
-},{threshold:.08,rootMargin:'0px 0px -40px 0px'});
-document.querySelectorAll('[data-reveal]').forEach(el=>obs.observe(el));
+const revealEls=document.querySelectorAll('[data-reveal]');
+if('IntersectionObserver' in window){
+  const obs=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');obs.unobserve(e.target)}});
+  },{threshold:.05,rootMargin:'0px 0px -20px 0px'});
+  revealEls.forEach(el=>obs.observe(el));
+  // Fallback: force visibility after 3s in case observer fails
+  setTimeout(()=>{revealEls.forEach(el=>el.classList.add('on'))},3000);
+} else {
+  // No IO support: show everything immediately
+  revealEls.forEach(el=>el.classList.add('on'));
+}
 
 // FAQ toggle
 function toggleFaq(btn){

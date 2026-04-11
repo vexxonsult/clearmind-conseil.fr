@@ -148,7 +148,8 @@ button{cursor:pointer;font-family:var(--sans);border:none}
       #offre .offre-grid>div:first-child .offre-desc{order:5}
       #offre .offre-grid>div:first-child .offre-points{order:6}
       #offre .offre-grid>div:first-child .btn-hero-primary{order:7;margin-top:8px}
-      .offre-price{position:relative;width:100%;box-sizing:border-box;margin:28px 0 0;padding:26px 28px 24px;background:var(--ink);color:#fff;border-radius:14px;font-family:var(--serif);font-size:clamp(1.5rem,3vw,1.95rem);font-weight:500;letter-spacing:-.005em;line-height:1.2}
+      .offre-price{display:block;text-decoration:none;cursor:pointer;position:relative;width:100%;box-sizing:border-box;margin:28px 0 0;padding:26px 28px 24px;background:var(--ink);color:#fff;border-radius:14px;font-family:var(--serif);font-size:clamp(1.5rem,3vw,1.95rem);font-weight:500;letter-spacing:-.005em;line-height:1.2}
+      .offre-price:hover{background:#1f2b3e}
       .offre-price::before{content:"PORTE D'ENTRÉE";display:block;font-family:var(--sans);font-size:.68rem;font-weight:600;letter-spacing:.16em;color:#B8D4BC;margin-bottom:12px}
       .offre-price-note{width:100%;box-sizing:border-box;margin:10px 0 30px;padding:0 4px;font-family:var(--sans);font-size:.8rem;color:var(--ink-soft);font-weight:400;line-height:1.55;font-style:italic}
 
@@ -454,7 +455,7 @@ footer{background:#0E1620;padding:40px 0}
         </div>
         <a href="#contact" class="btn-hero-primary" style="display:inline-flex" data-reveal data-d="3">Demander un diagnostic rapide <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 7h10M7 2l5 5-5 5"/></svg></a>
         
-        <p class="offre-price">Diagnostic rapide · 390€ HT</p>
+        <a class="offre-price" href="#contact" aria-label="Demander un diagnostic rapide">Diagnostic rapide · 390€ HT</a>
         <p class="offre-price-note">tarif de lancement · normalement 780€ HT · réponse sous 48h ouvrées </p>
       </div>
       <div data-reveal data-d="2">

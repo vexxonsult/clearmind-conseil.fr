@@ -150,7 +150,23 @@ button{cursor:pointer;font-family:var(--sans);border:none}
 .approche-h3{font-family:var(--serif);font-size:clamp(1.6rem,2.2vw,2.2rem);font-weight:300;color:var(--ink);margin-bottom:20px;line-height:1.2}
 .approche-left p{font-size:.92rem;line-height:1.8;color:var(--ink-soft);margin-bottom:14px}
 .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px}
-.tag{background:var(--sage-pale);border:1px solid var(--sage-light);color:var(--ink-mid);font-size:.72rem;font-weight:500;padding:6px 14px;border-radius:40px}
+.tag{
+  display: block;
+  margin: 0 auto; /* centre */
+  text-align: center;
+
+  background: var(--sage-pale);
+  border: 1px solid var(--sage-light);
+  color: var(--ink-mid);
+
+  font-size: 1rem; /* 🔥 plus gros */
+  font-weight: 500;
+
+  padding: 10px 20px; /* 🔥 plus lisible */
+  border-radius: 40px;
+
+  width: fit-content; /* 🔥 évite qu’il prenne toute la ligne */
+}
 .not-title{font-family:var(--serif);font-size:1.4rem;font-weight:400;color:var(--ink);margin-bottom:24px}
 .not-list{list-style:none;display:flex;flex-direction:column}
 .not-item{display:flex;align-items:flex-start;gap:14px;padding:13px 0;border-bottom:1px solid var(--stone-d);font-size:.88rem;line-height:1.55;color:var(--ink-soft)}

@@ -140,8 +140,17 @@ button{cursor:pointer;font-family:var(--sans);border:none}
 .offre-cta-zone p{font-size:.82rem;color:rgba(255,255,255,.72);margin-bottom:14px}
 .offre-cta-link{display:inline-block;background:var(--sage);color:#fff;font-size:.88rem;font-weight:500;padding:10px 22px;border-radius:40px;border:none;transition:all .2s}
 .offre-cta-link:hover{background:var(--sage-d);transform:translateY(-1px);box-shadow:0 6px 20px rgba(90,130,100,.35)}
-.offre-price{margin-top:28px;padding-top:22px;border-top:1px solid rgba(22,32,46,.1);font-family:var(--serif);font-size:1.3rem;font-weight:500;color:var(--ink);letter-spacing:-.005em;line-height:1.4}
-.offre-price-note{margin-top:6px;font-size:.85rem;color:var(--ink-soft);font-weight:400;line-height:1.5}
+#offre .offre-grid>div:first-child{display:flex;flex-direction:column;align-items:flex-start}
+      #offre .offre-grid>div:first-child .offre-tag{order:1}
+      #offre .offre-grid>div:first-child .offre-h2{order:2}
+      #offre .offre-grid>div:first-child .offre-price{order:3}
+      #offre .offre-grid>div:first-child .offre-price-note{order:4}
+      #offre .offre-grid>div:first-child .offre-desc{order:5}
+      #offre .offre-grid>div:first-child .offre-points{order:6}
+      #offre .offre-grid>div:first-child .btn-hero-primary{order:7;margin-top:8px}
+      .offre-price{position:relative;width:100%;box-sizing:border-box;margin:28px 0 0;padding:26px 28px 24px;background:var(--ink);color:#fff;border-radius:14px;font-family:var(--serif);font-size:clamp(1.5rem,3vw,1.95rem);font-weight:500;letter-spacing:-.005em;line-height:1.2}
+      .offre-price::before{content:"PORTE D'ENTRÉE · ÉTAPE 1";display:block;font-family:var(--sans);font-size:.68rem;font-weight:600;letter-spacing:.16em;color:#B8D4BC;margin-bottom:12px}
+      .offre-price-note{width:100%;box-sizing:border-box;margin:10px 0 30px;padding:0 4px;font-family:var(--sans);font-size:.8rem;color:var(--ink-soft);font-weight:400;line-height:1.55;font-style:italic}
 
 /* ââ APPROCHE âââââââââââââââââââââââââââââââââââââââââââââââ */
 #approche{background:var(--white);padding:96px 0}
@@ -436,21 +445,21 @@ footer{background:#0E1620;padding:40px 0}
     <div class="offre-grid">
       <div>
         <div class="offre-tag" data-reveal>L'offre</div>
-        <h2 class="offre-h2" data-reveal data-d="1">Trois niveaux d'intervention</h2>
+        <h2 class="offre-h2" data-reveal data-d="1">Commencer par un diagnostic. Avancer par paliers.</h2>
         <p class="offre-desc" data-reveal data-d="2">Pas un rapport générique. Une lecture experte de votre situation — et une réponse claire à "qu'est-ce qu'on fait ?".<br/><br/>Notre intervention ne crée aucune obligation et ne génère aucun document opposable. Ce que nous livrons vous appartient : vous décidez seul de ce que vous en faites.</p>
         <div class="offre-points" data-reveal data-d="2">
           <div class="offre-point"><div class="offre-point-dot"><svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="#7A9E82" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 5l2.5 2.5L8 2.5"/></svg></div>Comprendre ce qui se passe réellement dans une situation complexe</div>
           <div class="offre-point"><div class="offre-point-dot"><svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="#7A9E82" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 5l2.5 2.5L8 2.5"/></svg></div>Distinguer ce qui relève du management, de l'organisation ou d'un trouble invisible</div>
           <div class="offre-point"><div class="offre-point-dot"><svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="#7A9E82" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 5l2.5 2.5L8 2.5"/></svg></div>Prendre des décisions RH éclairées : aménagement, mobilité, accompagnement</div>
         </div>
-        <a href="#contact" class="btn-hero-primary" style="display:inline-flex" data-reveal data-d="3">Parlons d'une situation concrète <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 7h10M7 2l5 5-5 5"/></svg></a>
+        <a href="#contact" class="btn-hero-primary" style="display:inline-flex" data-reveal data-d="3">Demander un diagnostic rapide <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 7h10M7 2l5 5-5 5"/></svg></a>
         
-        <p class="offre-price">Tarif de lancement : 390€ HT</p>
-        <p class="offre-price-note">Tarif normal : 780€ HT - Réponse en 48h </p>
+        <p class="offre-price">Diagnostic rapide · 390€ HT</p>
+        <p class="offre-price-note">tarif de lancement · normalement 780€ HT · réponse sous 48h ouvrées </p>
       </div>
       <div data-reveal data-d="2">
         <div class="offre-panel">
-          <div class="offre-panel-head">Niveaux d'intervention</div>
+          <div class="offre-panel-head">Pour aller plus loin — 3 niveaux</div>
           <div class="offre-level"><div class="offre-level-num">Niveau 1</div><h5>Éclairage</h5><p>Cadrage 1h + analyse + restitution écrite avec 3 recommandations + Q&R 30min. Sans engagement.</p></div>
           <div class="offre-level"><div class="offre-level-num">Niveau 2</div><h5>Accompagnement</h5><p>Suivi mensuel sur 3 ou 6 mois, 2 séances/mois, appui rédaction RH, veille OETH.</p></div>
           <div class="offre-level"><div class="offre-level-num">Niveau 3</div><h5>Programme</h5><p>Démarche 6 mois : audit QVT/handicap, protocole interne, sensibilisation managers.</p></div>
